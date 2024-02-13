@@ -13,30 +13,28 @@
 
 ## Rotas para Testes
 
-*Criando enquete*: 
-Tipo: Post
-url: http://localhost:3333/polls
-dados: title(titulo da enquete) & options(opções de votos).
-response: pollId(id da enquete utilizado na próxima rota).
+**_Criando enquete_**: 
 
+- Tipo: Post
+- url: http://localhost:3333/polls
+- dados: title(titulo da enquete) & options(opções de votos).
+- response: pollId(id da enquete utilizado na próxima rota).
 
-*Visualizando enquete e opções de votos*
-Tipo: Get
-url: http://localhost:3333/polls/<"id da enquete(pollId)">
-dados: sem dados para o envio.
-response: Enquete com titulo e opções e votos(obs: em options, pegar o id da opção a qual votará).
+**_Visualizando enquete e opções de votos_**:
+- Tipo: Get
+- url: http://localhost:3333/polls/<"id da enquete(pollId)">
+- dados: sem dados para o envio.
+- response: Enquete com titulo e opções e votos(obs: em options, pegar o id da opção a qual votará).
 
+**_Votando na opção desejada_**:
+- Tipo: Post
+- url: http://localhost:3333/polls/<"id da opção desejada">/votes
+- dados: pollOptionId: id da opção
+- response: Sem dados de resposta
 
-*Votação da opção desejada*
-Tipo: Post
-url: http://localhost:3333/polls/<"id da opção desejada">/votes
-dados: pollOptionId: id da opção
-response: Sem dados de resposta
-
-
-*Real time*
+**_Real time_**:
 *Essa é uma rota de web socket, lembre de conferir se no seu **API Client** a opção **Web Socket** ao criar uma nova rota*
-Tipo: web socket
-url: ws://localhost:3333/polls/<"id da enquete criada">/results
-dados: sem dados para envio
-response: opções votadas em tempo real.
+- Tipo: web socket
+- url: ws://localhost:3333/polls/<"id da enquete criada">/results
+- dados: sem dados para envio
+- response: opções votadas em tempo real.
