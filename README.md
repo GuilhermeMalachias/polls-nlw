@@ -7,9 +7,9 @@
 
 
 ## Rodando o Projeto
-Depois de instalado os requisitos, rodaremos o comando **npm install** para instalar todas as dependências do projeto.
-Em seguida **npm run dev** que rodara o projeto local na **porta:3333**.
-E por fim o comando **Docker**: docker compose up -d, que deixará as aplicações configuradas rodando em background.
+- Depois de instalado os requisitos, rodaremos o comando **npm install** para instalar todas as dependências do projeto.
+- Em seguida **npm run dev** que rodara o projeto local na **porta:3333**.
+- E por fim o comando **Docker**: docker compose up -d, que deixará as aplicações configuradas rodando em background.
 
 ## Rotas para Testes
 
